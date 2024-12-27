@@ -1,0 +1,320 @@
+/* General Styling */
+body {
+    font-family: 'Mona Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .education-page {
+    display: grid;
+    grid-template-columns: 100px auto 300px;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin: 1rem;
+    background-color: #F3EBE5;
+    border-radius: 16px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-img{
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .menu-icons{
+    background-color: white;
+    border-radius: 50%; 
+    width: 1.3rem;
+    padding: 7px;
+    display: flex;
+  }
+
+  .menu-icons img{
+    max-width: 100%; 
+  }
+
+  .menu-icons:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .profile-avatar{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+ .avatar img{
+    width: 1.7rem;
+ }
+
+  .main-content {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header h1{
+    font-size: 4rem;
+    font-weight:normal;
+    line-height: 4.2rem;
+  }
+
+  .categories{
+    display: flex;
+  }
+  
+  .categories button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #F3EBE5;
+    border: none;
+    margin-right: 10px;
+    padding: 5px;
+    padding-right: 20px;
+    font-weight:600;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+
+  .courses {
+    margin-top: 20px;
+  }
+
+  .courses h2{
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .course-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card h3 {
+    margin: 2rem 0 0 0;
+  }
+  
+  .course-card .rating {
+    font-size: 0.6rem;
+    font-weight: 600;
+    background-color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 2rem;
+  }
+
+  .course-card .ranking{
+    font-size: 0.6rem;
+    font-weight: 600;
+    background-color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 2rem;
+    margin: 5px;
+    color: #924625;
+  }
+  
+  .course-card.pink {
+    background-color: #F3C5C5;
+  }
+  
+  .course-card.yellow {
+    background-color: #FAE0C1;
+  }
+  
+  .course-card.purple {
+    background-color: #D5D2FE;
+  }
+  
+  .course-card.green {
+    background-color: #BFF0DB;
+  }
+
+  .card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-header-content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .profile-section {
+    padding: 20px;
+    background-color: #F3EBE5;
+    margin: 1.3rem;
+    border-radius: 20px;
+  }
+  
+  .profile-header {
+    text-align: center;
+  }
+
+  .profile-header h3{
+    margin-top: -10px;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .profile-header .friends{
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+  }
+
+  .profile-header .friends img{
+    box-shadow: 3px -2px 0 #D5D2FE;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+  }
+
+  .profile-header .friends p{
+    font-size: 0.8rem;
+  }
+
+  .profile-header-icons{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .profile-header-icons img{
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  
+  .profile-header .profile-header-avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .activity {
+    background: white;
+    margin-top: 20px;
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .activity-chart {
+    display: flex;
+    gap: 5px;
+  }
+
+  .card-header .year{
+    border-radius: 20px;
+    padding: 3px;
+    border-color: #D5D2FE;
+  }
+  
+  .activity-chart .bar {
+    flex: 1;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+  }
+  
+  .activity-chart .bar.active {
+    background-color: #90caf9;
+  }
+  
+  .my-courses {
+    margin-top: 20px;
+  }
+  
+  .my-courses .course-summary {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .education-page {
+      grid-template-columns: 100px auto;
+      grid-template-rows: auto 300px;
+    }
+  
+    .sidebar {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+  
+    .main-content {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  
+    .profile-section {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      padding: 10px;
+    }
+  
+    .header {
+      flex-direction: column;
+    }
+  
+    .course-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .activity-chart {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .activity-chart .bar {
+      width: 100%;
+    }
+  }
+  
