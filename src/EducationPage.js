@@ -116,7 +116,7 @@ const EducationPage = () => {
           </div>
         </div>
         <div className="my-courses">
-          <h4>My courses</h4>
+          <h4>My coursessss</h4>
           <div className="course-summary">
             <p>Flutter Masterclass</p>
             <span>⭐ 4.8</span>
