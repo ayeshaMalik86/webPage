@@ -3,13 +3,13 @@ import './EducationPage.css';
 
 const EducationPage = () => {
   const activityData = [
-    { lavender: '40%', orange: '20%', pink: '35%',}, 
-    { pink: '30%', lavender: '30%', green: '40%', orange: '0%' }, 
-    { pink: '30%', lavender: '30%', green: '40%', orange: '0%' },
-    { pink: '30%', lavender: '30%', green: '40%', orange: '0%' },
-    { pink: '30%', lavender: '30%', green: '40%', orange: '0%'},
-    { pink: '20%', lavender: '40%', green: '40%', orange: '0%'},
-    { pink: '20%', lavender: '40%', green: '40%', orange: '0%' }  
+    {  month: 'Jan', lavender: '40%', orange: '20%', pink: '35%',}, 
+    { month: 'Jan', pink: '30%', lavender: '30%', green: '40%', orange: '0%' }, 
+    { month: 'Aug', pink: '30%', lavender: '30%', green: '40%', orange: '0%' },
+    { month: 'Sep', pink: '30%', lavender: '30%', green: '40%', orange: '0%' },
+    { month: 'Oct', pink: '30%', lavender: '30%', green: '40%', orange: '0%'},
+    { month: 'Nov', pink: '20%', lavender: '40%', green: '40%', orange: '0%'},
+    { month: 'Dec', pink: '20%', lavender: '40%', green: '40%', orange: '0%' }  
   ];
   
   return (
@@ -124,6 +124,7 @@ const EducationPage = () => {
                 <div className="segment segment-lavender" style={{ height: month.lavender }}></div>
                 <div className="segment segment-green" style={{ height: month.green }}></div>
                 <div className="segment segment-orange" style={{ height: month.orange }}></div>
+                <div className="month-label">{month.month}</div>
               </div>
             ))}
           </div>

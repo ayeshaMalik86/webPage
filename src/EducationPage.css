@@ -271,7 +271,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: #f0f0f0;
     position: relative;
     height: 100px;
   }
@@ -286,6 +285,8 @@ body {
   
   .segment-pink {
     background-color: #F3C5C5; 
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
   }
   
   .segment-lavender {
@@ -294,10 +295,20 @@ body {
   
   .segment-green {
     background-color: #BFF0DB; 
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
   }
 
   .segment-orange {
     background-color: #FAE0C1; 
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .month-label{
+    margin-top: 10px;
+    font-size: 12px;
+    align-self: center;
   }
 
   
