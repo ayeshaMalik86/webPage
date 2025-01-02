@@ -133,6 +133,11 @@ const EducationPage = () => {
           <div className='friends'>
           <img src="/icons/user.png" alt="user" />
             <p>274 Friends</p>
+            <div className="avatars">
+                <img src="/icons/person1.png" alt="Avatar 1" className="avatar-icon1" />
+                <img src="/icons/person2.png" alt="Avatar 2" className="avatar-icon2" />
+                <img src="/icons/avatar.png" alt="Avatar 2" className="avatar-icon3" />
+              </div>
             </div>
         </div>
         <div className="activity">

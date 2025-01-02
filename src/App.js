@@ -4,5 +4,4 @@ import EducationPage from './EducationPage';
 function App() {
   return <EducationPage />;
 }
-
 export default App;
