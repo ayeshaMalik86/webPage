@@ -256,8 +256,9 @@ body {
   .activity-chart {
     display: flex;
     gap: 5px;
-    margin-top: 10px;
+    margin-top: 2rem;
     align-items: flex-end;
+    border-top: 1px solid rgb(212, 204, 204);
   }
 
   .card-header .year{
@@ -309,8 +310,22 @@ body {
     margin-top: 10px;
     font-size: 12px;
     align-self: center;
+    margin-bottom: 5px;
   }
 
+  .bar.active-december .month-label {
+    background-color: black;
+    color: white;
+    padding: 6px;
+    border-radius: 16px;
+    margin-top: 3px;
+  }
+
+  .bar.active-december {
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 1px;
+  }
   
   .my-courses {
     margin-top: 20px;
@@ -336,8 +351,22 @@ body {
   .card-header .rating{
     font-size: 0.8rem;
   }
-  
 
+  .avatars {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .avatar-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+  }
+  .avatar-class{
+    display: flex;
+    justify-content: space-between;
+  }
    @media (max-width: 768px) {
    .education-page {
       grid-template-columns: 100px auto;

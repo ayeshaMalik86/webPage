@@ -4,12 +4,12 @@ import './EducationPage.css';
 const EducationPage = () => {
   const activityData = [
     {  month: 'Jan', lavender: '40%', orange: '20%', pink: '35%',}, 
-    { month: 'Jan', pink: '30%', lavender: '30%', green: '40%', orange: '0%' }, 
-    { month: 'Aug', pink: '30%', lavender: '30%', green: '40%', orange: '0%' },
-    { month: 'Sep', pink: '30%', lavender: '30%', green: '40%', orange: '0%' },
-    { month: 'Oct', pink: '30%', lavender: '30%', green: '40%', orange: '0%'},
-    { month: 'Nov', pink: '20%', lavender: '40%', green: '40%', orange: '0%'},
-    { month: 'Dec', pink: '20%', lavender: '40%', green: '40%', orange: '0%' }  
+    { month: 'Jan', pink: '20%', lavender: '30%', green: '20%', orange: '0%' }, 
+    { month: 'Aug', pink: '20%', lavender: '10%' , orange: '0%' ,green: '20%'},
+    { month: 'Sep', pink: '20%', lavender: '10%', green: '0%', orange: '20%' },
+    { month: 'Oct', pink: '30%', lavender: '30%', green: '15%', orange: '0%'},
+    { month: 'Nov', pink: '15%', lavender: '20%', green: '20%', orange: '0%'},
+    { month: 'Dec', pink: '20%', lavender: '40%', green: '0%', orange: '40%' }  
   ];
   
   return (
@@ -67,7 +67,13 @@ const EducationPage = () => {
                 <span className="rating">⭐ 4.9</span>
               </div>
               <h3>Powerful Business Writing: How to Write Concisely</h3>
+              <div className='avatar-class'>
               <p className='student'>1,463 students</p>
+                <div className="avatars">
+                <img src="/icons/person1.png" alt="Avatar 1" className="avatar-icon" />
+                <img src="/icons/person2.png" alt="Avatar 2" className="avatar-icon" />
+              </div>
+              </div>
             </div>
             <div className="course-card purple">
             <div className='card-header'>
@@ -119,7 +125,7 @@ const EducationPage = () => {
           <p>3.5h <span className='great-result'>👍 Great result!</span></p>
           <div className="activity-chart">
             {activityData.map((month, index) => (
-              <div key={index} className={`bar ${index === 11 ? 'active' : ''}`}>
+              <div key={index} className={`bar ${index === 6 ? 'active-december' : ''}`}>
                 <div className="segment segment-pink" style={{ height: month.pink }}></div>
                 <div className="segment segment-lavender" style={{ height: month.lavender }}></div>
                 <div className="segment segment-green" style={{ height: month.green }}></div>
