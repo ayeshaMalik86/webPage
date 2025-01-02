@@ -356,16 +356,22 @@ body {
     display: flex;
     margin-top: 10px;
   }
-  
-  .avatar-icon {
+  .avatar-icon1{
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .avatar-icon2 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .avatar-icon3 {
     width: 1.3rem;
     height: 1.3rem;
-    border-radius: 50%;
-    border: 1px solid #ddd;
   }
   .avatar-class{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
    @media (max-width: 768px) {
    .education-page {

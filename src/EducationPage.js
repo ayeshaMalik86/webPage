@@ -55,7 +55,14 @@ const EducationPage = () => {
                 <span className="rating">⭐ 4.8</span>
               </div>
               <h3>CCNA 2020 200-125 Video Boot Camp</h3>
+              <div className='avatar-class'>
               <p className='student'>9,530 students</p>
+                <div className="avatars">
+                <img src="/icons/person1.png" alt="Avatar 1" className="avatar-icon1" />
+                <img src="/icons/person2.png" alt="Avatar 2" className="avatar-icon2" />
+                <img src="/icons/avatar.png" alt="Avatar 2" className="avatar-icon3" />
+              </div>
+              </div>
               
             </div>
             <div className="course-card yellow">
@@ -70,8 +77,8 @@ const EducationPage = () => {
               <div className='avatar-class'>
               <p className='student'>1,463 students</p>
                 <div className="avatars">
-                <img src="/icons/person1.png" alt="Avatar 1" className="avatar-icon" />
-                <img src="/icons/person2.png" alt="Avatar 2" className="avatar-icon" />
+                <img src="/icons/person1.png" alt="Avatar 1" className="avatar-icon1" />
+                <img src="/icons/person2.png" alt="Avatar 2" className="avatar-icon2" />
               </div>
               </div>
             </div>
@@ -84,7 +91,13 @@ const EducationPage = () => {
                 <span className="rating">⭐ 4.9</span>
               </div>
               <h3>Certified Six Sigma Yellow Belt Training</h3>
+              <div className='avatar-class'>
               <p className='student'>6,726 students</p>
+                <div className="avatars">
+                <img src="/icons/person1.png" alt="Avatar 1" className="avatar-icon1" />
+                <img src="/icons/person2.png" alt="Avatar 2" className="avatar-icon2" />
+              </div>
+              </div>
             </div>
             <div className="course-card green">
             <div className='card-header'>
@@ -98,7 +111,12 @@ const EducationPage = () => {
                 </div>
               </div>
               <h3>How to Design a Room in 10 Easy Steps</h3>
+              <div className='avatar-class'>
               <p className='student'>8,735 students</p>
+                <div className="avatars">
+                <img src="/icons/person1.png" alt="Avatar 1" className="avatar-icon1" />
+              </div>
+              </div>
             </div>
           </div>
         </section>
@@ -146,7 +164,14 @@ const EducationPage = () => {
                 <span className="rating">☆ 4.8</span>
               </div>
             <p className='card-title'>Flutter Masterclass(Dart, API, Firebase and more)</p>
-            <p className='student'>9530 students</p>
+            <div className='avatar-class'>
+              <p className='student'>9,530 students</p>
+                <div className="avatars">
+                <img src="/icons/person1.png" alt="Avatar 1" className="avatar-icon1" />
+                <img src="/icons/person2.png" alt="Avatar 2" className="avatar-icon2" />
+                <img src="/icons/avatar.png" alt="Avatar 2" className="avatar-icon3" />
+              </div>
+              </div>
           </div>
         </div>
       </aside>
