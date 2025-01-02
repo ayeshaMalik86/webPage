@@ -2,6 +2,16 @@ import React from 'react';
 import './EducationPage.css';
 
 const EducationPage = () => {
+  const activityData = [
+    { lavender: '40%', orange: '20%', pink: '35%',}, 
+    { pink: '30%', lavender: '30%', green: '40%', orange: '0%' }, 
+    { pink: '30%', lavender: '30%', green: '40%', orange: '0%' },
+    { pink: '30%', lavender: '30%', green: '40%', orange: '0%' },
+    { pink: '30%', lavender: '30%', green: '40%', orange: '0%'},
+    { pink: '20%', lavender: '40%', green: '40%', orange: '0%'},
+    { pink: '20%', lavender: '40%', green: '40%', orange: '0%' }  
+  ];
+  
   return (
     <div className="education-page">
       <div className="sidebar">
@@ -45,7 +55,7 @@ const EducationPage = () => {
                 <span className="rating">⭐ 4.8</span>
               </div>
               <h3>CCNA 2020 200-125 Video Boot Camp</h3>
-              <p>9,530 students</p>
+              <p className='student'>9,530 students</p>
               
             </div>
             <div className="course-card yellow">
@@ -57,7 +67,7 @@ const EducationPage = () => {
                 <span className="rating">⭐ 4.9</span>
               </div>
               <h3>Powerful Business Writing: How to Write Concisely</h3>
-              <p>1,463 students</p>
+              <p className='student'>1,463 students</p>
             </div>
             <div className="course-card purple">
             <div className='card-header'>
@@ -68,7 +78,7 @@ const EducationPage = () => {
                 <span className="rating">⭐ 4.9</span>
               </div>
               <h3>Certified Six Sigma Yellow Belt Training</h3>
-              <p>6,726 students</p>
+              <p className='student'>6,726 students</p>
             </div>
             <div className="course-card green">
             <div className='card-header'>
@@ -82,7 +92,7 @@ const EducationPage = () => {
                 </div>
               </div>
               <h3>How to Design a Room in 10 Easy Steps</h3>
-              <p>8,735 students</p>
+              <p className='student'>8,735 students</p>
             </div>
           </div>
         </section>
@@ -103,27 +113,33 @@ const EducationPage = () => {
         </div>
         <div className="activity">
           <div className='card-header'>
-          <h4>Activity</h4>
+          <p className='student'>Activity</p>
           <select className='year'><option>Year</option></select>
           </div>
-          <p>3.5h 🔥 Great result!</p>
+          <p>3.5h <span className='great-result'>👍 Great result!</span></p>
           <div className="activity-chart">
-            <div className="bar">Jan</div>
-            <div className="bar">Feb</div>
-            <div className="bar">Mar</div>
-            <div className="bar">Apr</div>
-            <div className="bar active">Dec</div>
+            {activityData.map((month, index) => (
+              <div key={index} className={`bar ${index === 11 ? 'active' : ''}`}>
+                <div className="segment segment-pink" style={{ height: month.pink }}></div>
+                <div className="segment segment-lavender" style={{ height: month.lavender }}></div>
+                <div className="segment segment-green" style={{ height: month.green }}></div>
+                <div className="segment segment-orange" style={{ height: month.orange }}></div>
+              </div>
+            ))}
           </div>
         </div>
         <div className="my-courses">
-          <h4>My coursessss</h4>
+          <h4>My courses</h4>
           <div className="course-summary">
-            <p>Flutter Masterclass</p>
-            <span>⭐ 4.8</span>
-          </div>
-          <div className="course-summary">
-            <p>Business Writing</p>
-            <span>⭐ 4.9</span>
+          <div className='card-header'>
+                <div className='card-header-content'>
+                <div className='menu-icons'><img src="/icons/laptop.png" alt="laptop"/></div>
+                    It and Software
+                </div>
+                <span className="rating">☆ 4.8</span>
+              </div>
+            <p className='card-title'>Flutter Masterclass(Dart, API, Firebase and more)</p>
+            <p className='student'>9530 students</p>
           </div>
         </div>
       </aside>

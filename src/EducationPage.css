@@ -7,8 +7,12 @@ body {
   
   .education-page {
     display: grid;
-    grid-template-columns: 100px auto 300px;
-    height: 100vh;
+    grid-template-columns: 100px auto 400px;
+  }
+
+  .student{
+    font-size: 13px;
+    font-weight: 500;
   }
   
   .sidebar {
@@ -131,7 +135,7 @@ body {
     margin: 2rem 0 0 0;
   }
   
-  .course-card .rating {
+ .rating {
     font-size: 0.6rem;
     font-weight: 600;
     background-color: white;
@@ -144,7 +148,7 @@ body {
     font-weight: 600;
     background-color: white;
     padding: 0.3rem 0.6rem;
-    border-radius: 2rem;
+    border-radius: 16px;
     margin: 5px;
     color: #924625;
   }
@@ -238,11 +242,22 @@ body {
     margin-top: 20px;
     padding: 1rem;
     border-radius: 20px;
+    line-height: 2px;
+  }
+
+  .activity .great-result{
+    background-color: #F3EBE5;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    
   }
 
   .activity-chart {
     display: flex;
     gap: 5px;
+    margin-top: 10px;
+    align-items: flex-end;
   }
 
   .card-header .year{
@@ -253,68 +268,89 @@ body {
   
   .activity-chart .bar {
     flex: 1;
-    height: 20px;
-    background-color: #ddd;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #f0f0f0;
+    position: relative;
+    height: 100px;
   }
   
   .activity-chart .bar.active {
-    background-color: #90caf9;
+    border: 2px solid #000; 
   }
+  
+  .activity-chart .segment {
+    width: 100%;
+  }
+  
+  .segment-pink {
+    background-color: #F3C5C5; 
+  }
+  
+  .segment-lavender {
+    background-color: #D5D2FE; 
+  }
+  
+  .segment-green {
+    background-color: #BFF0DB; 
+  }
+
+  .segment-orange {
+    background-color: #FAE0C1; 
+  }
+
   
   .my-courses {
     margin-top: 20px;
   }
+
+  .my-courses h4{
+    font-weight: 400;
+  }
   
   .my-courses .course-summary {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    background-color: #f7f7f7;
     padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #EF98A1 60%, #F3C5C5 40%);
+  }
+
+  .card-title{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .card-header .rating{
+    font-size: 0.8rem;
   }
   
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .education-page {
+
+   @media (max-width: 768px) {
+   .education-page {
       grid-template-columns: 100px auto;
-      grid-template-rows: auto 300px;
     }
-  
     .sidebar {
-      grid-column: 1 / 2;
-      grid-row: 1 / 3;
+      flex-direction: column;
     }
-  
-    .main-content {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
+
+    .course-grid{
+      grid-template-columns: 1fr;
     }
-  
+
+    .categories{
+      flex-wrap: wrap;
+      gap: 10px;
+    }
     .profile-section {
       grid-column: 1 / 3;
-      grid-row: 2 / 3;
       padding: 10px;
     }
   
     .header {
       flex-direction: column;
     }
-  
-    .course-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .activity-chart {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .activity-chart .bar {
-      width: 100%;
-    }
-  }
+
+  } 
   
