@@ -124,11 +124,18 @@ body {
   }
   
   .course-card {
-    background-color: #f7f7f7;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+
+  .course-card:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.331);
+  }
+
+  .course-summary:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.331);
+  }
+  
   
   .course-card h3 {
     margin: 2rem 0 0 0;
@@ -312,24 +319,59 @@ body {
     margin-bottom: 5px;
   }
 
-  .bar.active-december .month-label {
-    background-color: black;
+  .bar.active {
+    border: 2px solid black;
+    border-radius: 16px;
+    background-color: #fafafa;
+    padding: 1px;
+    cursor: pointer;
+  }
+  .bar:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  .active-label {
+    background-color: #000;
     color: white;
     padding: 6px;
     border-radius: 16px;
-    margin-top: 3px;
   }
 
-  .bar.active-december {
-    border: 2px solid black;
-    border-radius: 16px;
-    padding: 1px;
-  }
-  
   .my-courses {
     margin-top: 20px;
   }
 
+  .profile-setting {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 100;
+  }
+  
+  .dropdown-menu button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu button:hover {
+    background: #f0f0f0;
+    border-radius: 16px;
+  }
+  
   .my-courses h4{
     font-weight: 400;
   }
@@ -376,10 +418,6 @@ body {
    .education-page {
       grid-template-columns: 100px auto;
     }
-    .sidebar {
-      flex-direction: column;
-    }
-
     .course-grid{
       grid-template-columns: 1fr;
     }

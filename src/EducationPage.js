@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './EducationPage.css';
 
 const EducationPage = () => {
+  const [selectedMonth, setSelectedMonth] = useState(null);
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible((prev) => !prev);
+  };
+
+  const closeDropdown = (event) => {
+    if (!event.target.closest('.profile-setting')) {
+      setDropdownVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', closeDropdown);
+    return () => {
+      document.removeEventListener('click', closeDropdown);
+    };
+  }, []);
+
   const activityData = [
     {  month: 'Jan', lavender: '40%', orange: '20%', pink: '35%',}, 
     { month: 'Jan', pink: '20%', lavender: '30%', green: '20%', orange: '0%' }, 
@@ -11,6 +31,10 @@ const EducationPage = () => {
     { month: 'Nov', pink: '15%', lavender: '20%', green: '20%', orange: '0%'},
     { month: 'Dec', pink: '20%', lavender: '40%', green: '0%', orange: '40%' }  
   ];
+
+  const handleBarClick = (month) => {
+    setSelectedMonth(month);
+  };
   
   return (
     <div className="education-page">
@@ -124,9 +148,18 @@ const EducationPage = () => {
 
       <aside className="profile-section">
         <div className="profile-header">
+          
+          <div className="profile-setting" onClick={toggleDropdown}>
           <div className='profile-header-icons'>
             <img src="/icons/bell.png" alt="bell" />
             <img src="/icons/setting.png" alt="setting" />
+            {isDropdownVisible && (
+                <div className="dropdown-menu">
+                  <button>Go to Settings</button>
+                  <button>Sign Out</button>
+                </div>
+              )}
+              </div>
             </div>
           <img className='profile-header-avatar' src="/icons/avatar.png" alt="Profile" />
           <h3>Annette Black</h3>
@@ -143,17 +176,28 @@ const EducationPage = () => {
         <div className="activity">
           <div className='card-header'>
           <p className='student'>Activity</p>
-          <select className='year'><option>Year</option></select>
+          <select className='year'>
+            <option>Year</option>
+            <option>2023</option>
+            <option>2022</option>
+            <option>2021</option>
+          </select>
           </div>
           <p>3.5h <span className='great-result'>👍 Great result!</span></p>
           <div className="activity-chart">
             {activityData.map((month, index) => (
-              <div key={index} className={`bar ${index === 6 ? 'active-december' : ''}`}>
-                <div className="segment segment-pink" style={{ height: month.pink }}></div>
-                <div className="segment segment-lavender" style={{ height: month.lavender }}></div>
-                <div className="segment segment-green" style={{ height: month.green }}></div>
-                <div className="segment segment-orange" style={{ height: month.orange }}></div>
-                <div className="month-label">{month.month}</div>
+                    <div
+                    key={index}
+                    className={`bar ${selectedMonth === month.month ? 'active' : ''}`}
+                    onClick={() => handleBarClick(month.month)}
+                  >
+                    <div className="segment segment-pink" style={{ height: month.pink }}></div>
+                    <div className="segment segment-lavender" style={{ height: month.lavender }}></div>
+                    <div className="segment segment-green" style={{ height: month.green }}></div>
+                    <div className="segment segment-orange" style={{ height: month.orange }}></div>
+                    <div className={`month-label ${selectedMonth === month.month ? 'active-label' : ''}`}>
+                      {month.month}
+                      </div>
               </div>
             ))}
           </div>
