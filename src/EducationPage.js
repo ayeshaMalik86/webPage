@@ -24,7 +24,7 @@ const EducationPage = () => {
 
   const activityData = [
     {  month: 'Jan', lavender: '40%', orange: '20%', pink: '35%',}, 
-    { month: 'Jan', pink: '20%', lavender: '30%', green: '20%', orange: '0%' }, 
+    { month: 'Apr', pink: '20%', lavender: '30%', green: '20%', orange: '0%' }, 
     { month: 'Aug', pink: '20%', lavender: '10%' , orange: '0%' ,green: '20%'},
     { month: 'Sep', pink: '20%', lavender: '10%', green: '0%', orange: '20%' },
     { month: 'Oct', pink: '30%', lavender: '30%', green: '15%', orange: '0%'},
@@ -148,11 +148,10 @@ const EducationPage = () => {
 
       <aside className="profile-section">
         <div className="profile-header">
-          
-          <div className="profile-setting" onClick={toggleDropdown}>
           <div className='profile-header-icons'>
             <img src="/icons/bell.png" alt="bell" />
-            <img src="/icons/setting.png" alt="setting" />
+            <div className="profile-setting" >
+            <img src="/icons/setting.png" alt="setting" onClick={toggleDropdown} />
             {isDropdownVisible && (
                 <div className="dropdown-menu">
                   <button>Go to Settings</button>
