@@ -51,7 +51,7 @@ const EducationPage = () => {
         </div>
         <div className="profile-avatar">
             <div className='menu-icons'><img src="/icons/setting.png" alt="setting"/></div>
-            <div className='avatar'><img src="/icons/avatar.png" alt="setting"/></div>
+            <div className='avatar'><img src="/icons/avatar.png" alt="avatar"/></div>
         </div>
       </div>
 
